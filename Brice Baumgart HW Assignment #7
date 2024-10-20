@@ -1,0 +1,102 @@
+# Discussion question 1 on page 278
+# part a lets compare and contrast a definite loop and indefinite loop
+# In comparison they are both examples of loop structures
+# They both cause the same code to repeat several times in a program
+# In Contrast a definite loop structure iterates a specific number of times
+# This specific number of times is known before the code is run
+# Meanwhile an indefinite loop will continue iterating until the condition
+# Until the condition expression is false
+# An indefinite loop will help get an unknown number of inputs from user
+# lets move on to part b
+# Both a for loop and an indefinite loop are examples of how python implements
+# loop structures
+# A for loop is used for a definite loop structure
+# A while loop is used for an indefinite loop structure
+# all programs that you can write using a for loop can be written again using
+# a while loop
+# lets move on to part c
+# both an interactive loop and a sentinel loop are examples of indefinite loop
+# structures
+# An interactive loop structure asks if the user wants to continue
+# after getting each input
+# Meanwhile a sentinel loop will allow the loop to end when a specific value
+# called the sentinel value is input
+# lets move on to part d
+# both a sentinel loop and an end of file loop are used to control the
+# iteration of a loop based on a certain condition
+# in difference a sentinel loop relies on a specific value
+# while a end of file loop relies on the end of a file
+# also sentinel loops involve user input
+
+# Lets move on to Discussion question 2a
+def generate_truth_table():
+     table = (['P', 'Q'], ['P and Q', 'not(P and Q)'])
+     print(table)
+
+# Here is DQ 2b
+def truth_table_generator():
+     table = (['P', 'Q'], ['not P', '(not P) and Q'])
+     print(table)
+
+# Here is DQ 2c
+def generate_truth_table():
+     table = (['P', 'Q'], ['not P', 'not Q'], ['(not P) or (not Q)'])
+     print(table)
+
+# Here is DQ 2d
+def generate_truth_table():
+     table = (['P', 'Q', 'R'], ['P and Q'], ['(P and Q) or R'])
+     print(table)
+
+# Here is DQ 2e
+def generate_truth_table():
+     table = (['P', 'Q', 'R'], ['P or R', 'Q or R'], ['(P or R) and (Q or R)'])
+     print(table)
+
+# Lets move on to Discussion question 3a and 3c
+# Here is 3a
+def main():
+     n = n(n + 1)/2
+     total = 0
+     for num in range(n + 1):
+         total += num
+ 
+main()
+
+# Here is 3c
+def main():
+     total = 0
+     user_num = eval(input("Enter a number, 999 to quit: "))
+     while user_num != 999:
+         total += user_num
+         user_num = eval(input("Enter a number, 999 to quit: "))
+
+# Lets move on to Programming Exercise Number 1 on page 279
+n = eval(input("Enter a positive integer: "))
+Enter a positive integer: 1
+prev = 1
+fib = 1
+for i in range(2,n):
+     temp = prev
+     prev = fib
+     fib = temp + fib
+      
+print("The value of Fibonacci(" + str(n) + ") is", fib)
+The value of Fibonacci(1) is 1
+
+# Lets move on to Programming Exercise number 4 on page 280
+def main():
+     num = eval(input("Enter a positive integer: "))
+     print(str(num) + ", ", end="")
+     while num != 1:
+         if num % 2 == 0:
+             num = num // 2
+         else:
+             num = 3*num + 1
+         if num != 1:
+             print(str(num) + ", ", end="")
+         else:
+             print(1)
+Enter a positive integer: 6
+6, 3, 10, 5, 16, 8, 4, 2, 1
+main()
